@@ -1,0 +1,46 @@
+@charset "utf-8";
+// ===================================================================
+// 設定ファイル
+// ===================================================================
+
+// ベースフォント
+$base_font: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+
+//ベースフォントサイズ
+$base_font_size :14px;
+
+//ベースフォントカラー
+$base_font_color:#212124;
+
+//メニューフォントカラー
+$menu_font_color:#fff;
+
+//リンクカラー
+$a_color:#333;
+
+//リンクover
+$a_over:#333;
+
+//メインカラー
+$main_color:#0267b5;
+
+//全体最大幅
+$max_base_width: 960px;
+
+//コンテンツサイズ
+$contents_width: 700px;
+
+//サイドバーサイズ
+$side_width: 240px;
+
+//ホバーカラー
+$hover_color:#B3DEFF;
+
+//余白
+$base_padding:10px;
+
+// 要素の基本下マージン
+$base_margin_bottom: 10px;
+
+//グローバルナビボタン高さ
+$g_nav_height :70px;

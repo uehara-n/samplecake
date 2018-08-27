@@ -1,0 +1,182 @@
+@charset "utf-8";
+// ===================================================================
+// mixin CSS3
+// ===================================================================
+/*レスポンシブサイズ設定*/
+
+//ブレイクポイント設定
+
+$bp_ip5 : 320px; //iPhone5
+$bp_ip5_l : 568px; //iPhone5ランドスケープ
+$bp_ip6 : 375px; //iPhone6
+$bp_ip6_l : 667px; //iPhone6ランドスケープ
+$bp_ip6p: 414px; //iPhone6+
+$bp_ip6p_l: 736px; //iPhone6+ランドスケープ
+$bp_ipad : 768px; //ipad
+$bp_ipad_l : 1024px; //ipad
+$contents_width : $max_base_width;//サイト全体幅
+$site_width : 1040px;//サイト幅
+$bnr_width : 1200px;//サイト幅を超えるバナーの幅
+
+$bp_sp : 640px;//スマートフォン
+$bp_tab : 960px;//タブレット
+$bp_pc : 1280px;//デスクトップ
+$navi : 800px;//ナビメニュー用
+
+
+$w790 : 790px;
+$break1:600px;
+$break2:960px;
+
+
+//メディアクエリ用のミックスイン
+@mixin media($media-width){
+
+		@if $media-width == break1_over {
+		@media only screen and (min-width: $break1){//600以上
+			@content;
+		}
+	}
+	@elseif $media-width == break1_under {
+		@media only screen and (max-width: $break1 - 1){//599以下
+			@content;
+		}
+	}
+		@if $media-width == break2_over {
+		@media only screen and (min-width: $break2){//960以上
+			@content;
+		}
+	}
+	@elseif $media-width == break2_under {
+		@media only screen and (max-width: $break2 - 1){//959以下
+			@content;
+		}
+	}
+
+
+
+	@elseif $media-width == pc {
+		@media only screen and (min-width: 1 + $bp_pc){//PC1280pxを超える場合
+			@content;
+		}
+	}
+		@else if $media-width == tab_b {
+			@media only screen and (max-width:$bp_pc){//タブレット1280px以下
+				@content;
+			}
+		}
+	@else if $media-width == max_bnr_width{
+			@media only screen and (max-width: $bnr_width){//コンテンツ幅を超えるバナー幅より小さい 1200px以下
+				@content;
+			}
+	}
+
+		@else if $media-width == max_contents{
+			@media only screen and (max-width: $contents_width){//コンテンツ幅以下　1100px以下
+				@content;
+			}
+	}
+
+		@else if $media-width == max_tab_m {
+			@media only screen and (max-width:$bp_tab){//タブレット960px以下
+				@content;
+			}
+		}
+			@else if $media-width == max_bp_ipad {
+			@media only screen and (max-width:$bp_ipad){//タブレット760px以下
+				@content;
+			}
+		}
+
+		@else if $media-width == max_sp_b {
+			@media only screen and (max-width:$bp_sp){//スマートフォン640px以下
+				@content;
+			}
+		}
+		@else if $media-width == max_bp_ip6p_l {
+			@media only screen and (max-width:$bp_ip6p_l){//iphone6+ランドスケープ以下
+				@content;
+			}
+		}
+		@else if $media-width == max_sp_s {
+			@media only screen and (max-width:$bp_ip5){//スマートフォン320px以下
+				@content;
+			}
+		}
+		@else if $media-width == max_790 {
+			@media only screen and (max-width:$w790){//790以下
+				@content;
+			}
+		}
+
+	//以上編
+			@if $media-width == min_contents {
+			@media print, screen and (min-width:$contents_width + 1){//コンテンツ幅を超える 1101px;
+				@content;
+			}
+		}
+				@else if $media-width == min_bp_ipad {
+			@media print, screen and (min-width:$bp_ipad + 1){//タブレット760px以下
+				@content;
+			}
+		}
+
+			@if $media-width == min_sp_b {
+			@media print, screen and (min-width:$bp_sp + 1){//スマホ幅以上 641px;
+				@content;
+			}
+		}
+			@if $media-width == min_bp_ip6p_l {
+			@media print, screen and (min-width:$bp_ip6p_l + 1){//スマホ幅以上 641px;
+				@content;
+			}
+		}
+
+
+	//幅限定編
+		@if $media-width == btw_cont_bnr {//641pxから1100px以下
+			@media (min-width: $bp_sp + 1) and (max-width: $site_width) {
+			@content;
+		}
+}
+	//ナビメニュー用
+	@if $media-width == navi_over {
+		@media only screen and (min-width: $navi){//800以上
+			@content;
+		}
+	}
+	@elseif $media-width == navi_under {
+		@media only screen and (max-width: $navi - 1){//799以下
+			@content;
+		}
+	}
+
+}
+
+
+//flexbox
+@mixin flexbox {//flexbox IE対応
+	 -js-display: flex;
+  display: flex;
+}
+
+@mixin flex-w-sb{
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	-webkit-flex-wrap:wrap;
+	justify-content: space-between;
+}
+
+//ボックスシャドウ
+@mixin boxshadow {
+				box-shadow:4px 2px 6px 0px rgba(0,0,0,0.66);
+				-moz-box-shadow:4px 2px 6px 0px rgba(0,0,0,0.66);
+				-webkit-box-shadow:4px 2px 6px 0px rgba(0,0,0,0.66);
+}
+
+// wormColor
+$wormColor01:#e3a095;
+.bordrl-deco01{
+	 border-left: solid 4px $wormColor01;
+}

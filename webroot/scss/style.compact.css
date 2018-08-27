@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/*レスポンシブサイズ設定*/
+.bordrl-deco01 { border-left: solid 4px #e3a095; }
+
+.clearfix:after { height: 0; visibility: hidden; content: "."; display: block; clear: both; }
+
+a { color: #212124; }
+
+a:hover { opacity: 0.7; }
+
+/* input */
+input[type=text], input[type=email], input[type=url], input[type=password], input[type=search], textarea { color: #212124; border: 1px solid #d3d3d3; border-radius: 3px; padding: .25em; background: #d3d3d3; transition: background-color .2s; }
+
+button, input[type=button], input[type=reset], input[type=submit] { display: inline-block; padding: .5em 4.5em; margin: 0 auto; background: #979ea2; border: none; border-radius: 3px; color: #fff; font-size: 16px; font-size: 1rem; text-align: center; letter-spacing: 1px; line-height: 1; font-weight: 400; font-family: "Proxima Bold",Helvetica,Arial,"Lucida Grande",sans-serif; cursor: pointer; -webkit-appearance: button; text-transform: capitalize; transition: background .2s; }
+
+#masthead { position: fixed; top: 0; width: 100%; background: #212124; z-index: 9999; }
+
+#masthead .wrap { width: 940px; width: 58.75rem; max-width: 100%; margin: 0 auto; padding: 0 4%; }
+
+#masthead .wrap .site-branding { margin: 0 1.25em 0 0; float: left; position: relative; }
+
+#masthead .wrap .site-branding .site-title a { color: #fff; }
+
+#masthead .wrap .searchform { float: right; margin-top: 10px; margin-top: .625rem; width: auto; }
+
+#masthead .wrap .searchform #searchsubmit { display: none; }
+
+#masthead .wrap .searchform input, #masthead .wrap .searchform input:focus { width: 230px; height: 30px; height: 1.875rem; background: #d3d3d3 url(/wp-content/themes/vip/flickr-2/css/../images/search.png) 0.25em center no-repeat; padding-left: 2em; transition: opacity .3s; transition: background-color .2s; }
+
+#masthead .main-navigation li { float: left; position: relative; }
+
+#masthead .main-navigation a { color: #fff; font-weight: 400; font-family: "Proxima Regular",Helvetica,Arial,"Lucida Grande",sans-serif; font-size: 17px; font-size: 1.0625rem; display: block; text-decoration: none; padding: .8em 1.25em .8em; height: 50px; -o-transition: opacity .2s; -ms-transition: opacity .2s; -moz-transition: opacity .2s; -webkit-transition: opacity .2s; transition: opacity .2s; }
+
+#masthead .main-navigation .sub-menu { padding: 8px 1px 0; left: 1em; color: #212124; }
+
+#masthead .main-navigation .sub-menu a { color: #212124; }
+
+#masthead .main-navigation ul ul { display: none; float: left; position: absolute; z-index: 99999; padding: .5em; }
+
+#masthead .main-navigation ul ul:before { content: ' '; width: 100%; height: 100%; position: absolute; border: 1px solid #aaa; border-radius: 4px; background-clip: padding-box; background-color: #fff; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); padding: 12px 0 8px; left: 0; }
+
+#masthead .main-navigation ul ul:after { content: ' '; width: 24px; height: 14px; background: transparent url(/wp-content/themes/vip/flickr-2/css/../images/tooltip-light.png) top center; position: absolute; top: -4px; left: .5em; }
+
+#masthead .main-navigation ul li:hover > ul { display: block; }
+
+#footer { padding: 1.5em 0; background: #191919; font-size: 14px; font-size: .875rem; font-family: "Proxima Regular",Helvetica,Arial,"Lucida Grande",sans-serif; text-align: center; }
+
+#footer .site-info { color: #b3b3b3; }
+
+#content { -js-display: flex; display: flex; min-height: 300px; padding: 100px; }
